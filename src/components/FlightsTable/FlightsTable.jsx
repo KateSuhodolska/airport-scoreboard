@@ -20,7 +20,7 @@ const FlightsTable = ({
 }) => {
   useEffect(() => {
     fetchFlightsList(searchDate);
-  }, [searchDate]);
+  }, [fetchFlightsList, searchDate]);
 
   const renderTableBody = (dataAction) =>
     dataAction.length > 0 ? (
