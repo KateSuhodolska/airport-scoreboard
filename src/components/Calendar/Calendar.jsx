@@ -29,6 +29,16 @@ const Calendar = ({ searchDate, setSearchDate }) => {
   const today = moment().format("DD-MM-YYYY");
   const tommorow = moment().add(1, "days").format("DD-MM-YYYY");
 
+  const selectTab = () => {
+    if (
+      searchDate !== yesterday ||
+      searchDate !== today ||
+      searchDate !== yesterday
+    ) {
+      setIndex(null);
+    }
+  };
+
   const handleChange = (event, newIndex) => {
     setIndex(newIndex);
   };
@@ -94,6 +104,7 @@ const Calendar = ({ searchDate, setSearchDate }) => {
             onAccept={toggleModal}
             onChange={(newValue) => {
               setSearchDate(moment(newValue.toDate()).format("DD-MM-YYYY"));
+              selectTab();
             }}
             closeOnSelect={true}
             onCancel={toggleModal}
