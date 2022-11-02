@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 92px;
+    width: 100%;
+    z-index: 9999;
+    background: #1eb7ee;
+    color: #fff;
+    box-shadow: 0 5px 10px rgb(37 40 41 / 30%);
+    &__logo {
+        margin-left: 120px;
+        &-img {
+            max-width: 180px;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.search-flights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 85px;
+    padding: 30px;
+    &__title {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 70px;
+        font-weight: 100;
+    }
+    &__form {
+        display: flex;
+        margin-top: 20px;
+        height: 80px;
+        width: 740px;
+        &-icon {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 15px;
+        }
+        &-input {
+            border: none;
+            flex-grow: 1;
+            font-size: 24px;
+            opacity: 0.8;
+        }
+        &-button {
+            width: 200px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: left;
+            border: none;
+            padding: 0 20px;
+            background-color: #1eb7ee;
+            border-top-right-radius: 80px;
+            cursor: pointer;
+            transition-duration: 0.5s;
+            &:hover {
+                border-top-right-radius: 40px;
+            }
+        }
+    }
+}
+
+.fa-magnifying-glass {
+    font-size: 30px;
+    opacity: 0.6;
+}
