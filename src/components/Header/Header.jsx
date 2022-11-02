@@ -7,7 +7,7 @@ const Header = () => {
       <div className="header__logo">
         <img
           className="header__logo-img"
-          src="https://iev.aero/_nuxt/img/logo@2x.2d2c20b.png"
+          src={require("./logo@2x.png")}
           alt="Logo"
         />
       </div>
