@@ -10,7 +10,7 @@ const SearchResults = () => {
   const [searchDate, setSearchDate] = useState(
     moment("01-01-2022", "DD-MM-YYYY").format("DD-MM-YYYY")
   );
-  //console.log(searchDate);
+
   return (
     <div className="search-results">
       <TabsList setIndexOfactiveTab={setIndexOfactiveTab} />

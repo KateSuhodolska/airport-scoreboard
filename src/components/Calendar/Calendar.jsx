@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./calendar.scss";
 
 import Tabs from "@mui/material/Tabs";
@@ -17,14 +17,11 @@ const Calendar = ({ searchDate, setSearchDate }) => {
 
   const toggleModal = () => setIsModalopen(!isModalopen);
 
-  function a11yProps(index, date) {
-    if (searchDate !== date) {
-      setIndex(null);
-    } else
-      return {
-        id: `simple-tab-${index}`,
-        "aria-controls": `simple-tabpanel-${index}`,
-      };
+  function a11yProps(index) {
+    return {
+      id: `simple-tab-${index}`,
+      "aria-controls": `simple-tabpanel-${index}`,
+    };
   }
   const isNoFlights = (date) => moment(date.toDate()).isAfter("2022-02-24");
 
@@ -54,7 +51,7 @@ const Calendar = ({ searchDate, setSearchDate }) => {
                 <span className="calendar__day-title">Yesterday</span>
               </div>
             }
-            {...a11yProps(0, yesterday)}
+            {...a11yProps(0)}
           />
           <Tab
             label={
@@ -68,7 +65,7 @@ const Calendar = ({ searchDate, setSearchDate }) => {
                 <span className="calendar__day-title">Today</span>
               </div>
             }
-            {...a11yProps(1, today)}
+            {...a11yProps(1)}
           />
           <Tab
             label={
@@ -82,7 +79,7 @@ const Calendar = ({ searchDate, setSearchDate }) => {
                 <span className="calendar__day-title">Tommorow</span>
               </div>
             }
-            {...a11yProps(2, tommorow)}
+            {...a11yProps(2)}
           />
         </Tabs>
       </Box>
